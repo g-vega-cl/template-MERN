@@ -8,6 +8,7 @@ const startSocket = (io) => {
 
     socket.on('example_message', (msg) => {
       console.log(`message: ${msg}`);
+      io.emit('example_message', msg);
     });
   });
 };
